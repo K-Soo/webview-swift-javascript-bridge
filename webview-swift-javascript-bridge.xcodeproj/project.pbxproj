@@ -11,6 +11,8 @@
 		B507A7F02B79CEFA0015AEEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507A7EF2B79CEFA0015AEEA /* ContentView.swift */; };
 		B507A7F22B79CEFD0015AEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B507A7F12B79CEFD0015AEEA /* Assets.xcassets */; };
 		B507A7F52B79CEFD0015AEEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B507A7F42B79CEFD0015AEEA /* Preview Assets.xcassets */; };
+		B507A7FF2B7A33D80015AEEA /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507A7FE2B7A33D80015AEEA /* Webview.swift */; };
+		B507A8042B7A466E0015AEEA /* ProgressLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507A8032B7A466E0015AEEA /* ProgressLoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		B507A7EF2B79CEFA0015AEEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B507A7F12B79CEFD0015AEEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B507A7F42B79CEFD0015AEEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B507A7FE2B7A33D80015AEEA /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
+		B507A8002B7A38560015AEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B507A8032B7A466E0015AEEA /* ProgressLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		B507A7EC2B79CEFA0015AEEA /* webview-swift-javascript-bridge */ = {
 			isa = PBXGroup;
 			children = (
+				B507A8002B7A38560015AEEA /* Info.plist */,
+				B507A7FD2B7A31A80015AEEA /* ViewModel */,
+				B507A7FC2B7A31A20015AEEA /* View */,
+				B507A7FB2B7A319A0015AEEA /* Model */,
 				B507A7ED2B79CEFA0015AEEA /* webview_swift_javascript_bridgeApp.swift */,
-				B507A7EF2B79CEFA0015AEEA /* ContentView.swift */,
 				B507A7F12B79CEFD0015AEEA /* Assets.xcassets */,
 				B507A7F32B79CEFD0015AEEA /* Preview Content */,
 			);
@@ -65,6 +73,30 @@
 				B507A7F42B79CEFD0015AEEA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B507A7FB2B7A319A0015AEEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B507A7FC2B7A31A20015AEEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B507A7EF2B79CEFA0015AEEA /* ContentView.swift */,
+				B507A7FE2B7A33D80015AEEA /* Webview.swift */,
+				B507A8032B7A466E0015AEEA /* ProgressLoadingView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B507A7FD2B7A31A80015AEEA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +169,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B507A7FF2B7A33D80015AEEA /* Webview.swift in Sources */,
+				B507A8042B7A466E0015AEEA /* ProgressLoadingView.swift in Sources */,
 				B507A7F02B79CEFA0015AEEA /* ContentView.swift in Sources */,
 				B507A7EE2B79CEFA0015AEEA /* webview_swift_javascript_bridgeApp.swift in Sources */,
 			);
@@ -275,11 +309,13 @@
 				DEVELOPMENT_TEAM = LF3VAV5AYK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "webview-swift-javascript-bridge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +340,13 @@
 				DEVELOPMENT_TEAM = LF3VAV5AYK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "webview-swift-javascript-bridge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
