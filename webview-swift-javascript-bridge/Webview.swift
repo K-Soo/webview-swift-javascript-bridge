@@ -21,7 +21,7 @@ struct Webview: UIViewRepresentable {
     let userContentController = WKUserContentController()
 
     //message handler
-    userContentController.add(self.makeCoordinator(), name: "signOutChannel")
+    userContentController.add(self.makeCoordinator(), name: "bridge")
 
 //    wkWebConfig.defaultWebpagePreferences.allowsContentJavaScript = true
     preferences.javaScriptCanOpenWindowsAutomatically = true
@@ -126,6 +126,16 @@ extension WebviewCoordinator : WKNavigationDelegate {
     //"javascript:window.NativeInterface.helloWorld('\(message)');" << next.js useEffect 작동 O
     //"funcName();" << next.js에서 스크립트 태그넣어서 작동 O
     //"nativeToJsEventCall('\(message)')"
+
+
+
+  
+
+    webView.evaluateJavaScript("javascript:window.NativeInterface.helloWorld()") { result, error in
+      print("result", result)
+      print("error", error)
+
+    }
 
   }
 

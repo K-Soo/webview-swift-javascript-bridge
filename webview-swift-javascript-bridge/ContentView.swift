@@ -12,14 +12,14 @@ struct ContentView: View {
 
     var body: some View {
       VStack {
-//        Webview(url: URL(string: "http://192.168.35.172:3000")!, showLoading: $showLoading)
+        Webview(url: URL(string: "http://192.168.45.81:3000")!, showLoading: $showLoading)
 //          .overlay {
 //            ProgressLoadingView()
 //          }
-        Webview(url: URL(string: "https://wala-land.com")!, showLoading: $showLoading)
-          .overlay {
-            ProgressLoadingView()
-          }
+//        Webview(url: URL(string: "https://wala-land.com")!, showLoading: $showLoading)
+//          .overlay {
+//            ProgressLoadingView()
+//          }
 
       }
     }
