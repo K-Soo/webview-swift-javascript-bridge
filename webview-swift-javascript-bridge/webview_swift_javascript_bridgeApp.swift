@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct webview_swift_javascript_bridgeApp: App {
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+            .environmentObject(WebViewModel())
         }
     }
 }
